@@ -1,0 +1,20 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "升空挑战LeftChallenge资源包",
+        "description": "升空挑战LeftChallenge地图配套资源包。贴图绘制@野鲤，技术支持@一只卑微的量筒",
+        "uuid": "18e1516e-6143-4791-b404-3e39c8f5411a",
+        "version": [ 1, 0, 0 ],
+        "min_engine_version": [ 1, 20, 10 ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "version": [ 1, 0, 0 ],
+            "uuid": "6093f1b3-5bf0-4c97-a6fc-5085d3ad2171"
+        }
+    ],
+    "metadata": {
+        "authors": [ "GreeLeaf","YZBWDLT" ]
+    }
+}
