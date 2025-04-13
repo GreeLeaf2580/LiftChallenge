@@ -1,0 +1,13 @@
+## ===== Items =====
+
+item.LC:change_to_creative=Change To Creative Mode
+item.LC:change_to_survival=Change To Survival Mode
+item.LC:change_to_adventure=Change To Adventure Mode
+item.LC:change_to_spectator=Change To Spectator Mode
+
+item.LC:quit=§bQuit Level
+item.LC:reset=§aReset Level
+item.LC:hint=§eHint
+item.lc:levitation=Get Levitation Effect
+item.lc:slow_falling=Get Slow Falling Effect
+

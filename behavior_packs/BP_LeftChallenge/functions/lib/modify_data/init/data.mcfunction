@@ -15,37 +15,32 @@ scoreboard objectives add active dummy "激活状态"
 scoreboard objectives add data dummy "数据"
 scoreboard objectives add settings dummy "设置"
 scoreboard objectives add time dummy "时间"
-
 scoreboard objectives add isOnline dummy "玩家在线"
 scoreboard objectives add state dummy "玩家状态"
+scoreboard objectives add chapter dummy "关卡章"
+scoreboard objectives add section dummy "关卡节"
 
 # --- 数据变量重置 ---
+
+## 玩家数据
+scoreboard players set @a isOnline 1
+scoreboard players set @a chapter 0
+scoreboard players set @a section 0
 
 ## 基础时间数据
 scoreboard players set tick time 0
 
+## 时间线
+scoreboard players set timeline active 0
+scoreboard players set timeline time 0
+scoreboard players set timeLapse data 0
+scoreboard players set keepValue data 0
+
+# --- 数据变量重置 ---
+
 ## 开发者设置
 scoreboard players set developerMode settings 0
 
-## 时间线、剧情线与音效播放器
-scoreboard players set timeline active 0
-scoreboard players set timeline time 0
-scoreboard players set dialogue active 0
-scoreboard players set dialogue time 0
+## 音效控制器
 scoreboard players set sound active 0
 scoreboard players set sound time 0
-
-## 杂项数据
-scoreboard players set playerAmount data 1
-scoreboard players set client data 0
-
-## 玩家数据
-scoreboard players set @a isOnline 1
-scoreboard players set @a state 1
-
-# --- 标记实体重置 ---
-kill @e[type=template:marker]
-
-## 相机的玩家位置和面向位置
-summon template:marker 0 0 0 0 0 * "playerPosition"
-summon template:marker 0 0 0 0 0 * "facingPosition"

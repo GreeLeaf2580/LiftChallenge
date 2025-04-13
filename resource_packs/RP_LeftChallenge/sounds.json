@@ -1,7 +1,7 @@
 {
     "entity_sounds": {
         "entities": {
-            "template:npc": {
+            "LC:npc": {
                 "events": {
                     "death": { "sound": "", "volume": 0 },
                     "hurt": { "sound": "", "volume": 0 }

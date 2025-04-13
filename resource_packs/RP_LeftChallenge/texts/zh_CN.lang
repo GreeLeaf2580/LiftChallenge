@@ -1,0 +1,26 @@
+## ===== 物品 =====
+
+item.LC:change_to_creative=改为创造模式
+item.LC:change_to_survival=改为生存模式
+item.LC:change_to_adventure=改为冒险模式
+item.LC:change_to_spectator=改为旁观模式
+item.LC:quit=§b退出关卡
+item.LC:reset=§a重置关卡
+item.LC:hint=§e提示
+item.lc:levitation=获取飘浮效果
+item.lc:slow_falling=获取缓降效果
+
+
+## ===== 对话 =====
+tell.failmsg.out_world=%s 掉出了世界
+tell.failmsg.sun_burnt=%s 晒伤了
+tell.failmsg.left_out=%s 飘走了
+tell.finish= 已完成！
+tell.reset= 已重置
+tell.quit= 已退出
+tell.levitation=§e获得状态效果 §h漂浮%s %s
+tell.slow_falling=§e获得状态效果 §h缓降%s %
+
+
+tell.hint.01.1=不在路线上时，有5秒的时间调整姿势
+tell.hint.01.2=以有限的飘浮效果到达终点

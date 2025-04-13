@@ -5,16 +5,26 @@
         "description": "升空挑战LeftChallenge地图配套行为包。技术支持@一只卑微的量筒",
         "uuid": "8e1ebb14-8dda-4d2b-a604-6f21f91b5fb3",
         "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 20, 10 ]
+        "min_engine_version": [ 1, 20, 50 ]
     },
     "modules": [
         {
             "type": "data",
             "version": [ 1, 0, 0 ],
             "uuid": "c269493f-04d9-499d-bc6f-2147efef94d6"
+        },
+        {
+            "type": "script",
+            "version": [ 1, 0, 0 ],
+            "uuid": "3158b0b1-402f-4c9d-8de6-ba76645db4ea",
+            "entry": "scripts/main.js",
+            "language": "javascript"
         }
     ],
-    "metadata": {
-        "authors": [ "GreeLeaf","YZBWDLT" ]
-    }
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.7.0"
+        }
+    ]
 }

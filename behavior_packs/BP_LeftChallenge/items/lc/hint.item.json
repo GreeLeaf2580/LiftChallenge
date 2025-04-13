@@ -1,0 +1,11 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "lc:hint"
+        },
+        "components": {
+            "minecraft:icon": "hint"
+        }
+    }
+}
