@@ -3,7 +3,7 @@
 import { world } from "@minecraft/server";
 
 /** 可执行命令的物品 */
-const usableItems = [ "lc:quit","lc:reset","lc:hint" ];
+const usableItems = [ "lc:quit","lc:reset","lc:hint","lc:levitation","lc:slow_falling" ];
 
 // 检查是否使用了物品，如有则执行命令
 world.afterEvents.itemUse.subscribe( event => {

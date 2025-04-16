@@ -4,7 +4,7 @@ import mod.server.extraServerApi as serverApi # type: ignore
 ServerSystem = serverApi.GetServerSystemCls()
 compFactory = serverApi.GetEngineCompFactory()
 
-usableItems = [ "lc:quit","lc:reset","lc:hint" ]
+usableItems = [ "lc:quit","lc:reset","lc:hint","lc:levitation","lc:slow_falling" ]
 
 class lcServerSystem(ServerSystem):
 

@@ -59,6 +59,11 @@ execute if score sound time matches 0 if score sound active matches 19 as @a[sco
 ## 20 | beacon.activate | 音调1
 execute if score sound time matches 0 if score sound active matches 20 as @a at @s run playsound beacon.activate @s ~ ~ ~ 10 1 10
 
+## 21 | mob.phantom.flap | 音调1
+execute if score sound time matches 0 if score sound active matches 21 as @a at @s run playsound mob.phantom.flap @s ~ ~ ~ 10 1 10
+
+## 22 | mob.parrot.fly | 音调1
+execute if score sound time matches 0 if score sound active matches 22 as @a at @s run playsound mob.parrot.fly @s ~ ~ ~ 10 1 10
 # --- 重置音效播放器 ---
 # 当音效倒计时为0后执行
-execute if score sound time matches 0 run function lib/modify_data/states/sound/disable
+execute if score sound time matches 0 run function lib/modify_states/sound/disable

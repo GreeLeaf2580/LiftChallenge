@@ -16,6 +16,15 @@ execute as @a[scores={chapter=0,section=0}] at @s if entity @a[scores={chapter=0
 execute as @a[scores={chapter=0,section=0}]  at @s if entity @a[rm=1,scores={chapter=0,section=0}] run effect @s invisibility 0 2 true
 execute as @a[scores={chapter=0,section=0}]  at @s if entity @a[rm=1,scores={chapter=0,section=0}] run replaceitem entity @s slot.armor.feet 0 air
 
+execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 air replace command_block
+execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 air replace minecraft:chain_command_block
+execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 air replace minecraft:repeating_command_block
+
 execute if entity @a[scores={chapter=0,section=0}] run function hall/entrance/timeline
 
 execute if entity @a[scores={chapter=0,section=1}] run function levels/01/timeline
+execute if entity @a[scores={chapter=1,section=1}] run function levels/11/timeline
+execute if entity @a[scores={chapter=1,section=2}] run function levels/12/timeline
+execute if entity @a[scores={chapter=1,section=3}] run function levels/13/timeline
+execute if entity @a[scores={chapter=1,section=4}] run function levels/14/timeline
+execute if entity @a[scores={chapter=1,section=5}] run function levels/15/timeline

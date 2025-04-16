@@ -1,0 +1,1 @@
+tellraw @s { "rawtext": [{ "translate": "tell.hint.12.1" },{ "text": "\n" },{ "translate": "tell.hint.12.2" }] }

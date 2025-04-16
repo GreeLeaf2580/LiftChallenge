@@ -19,8 +19,12 @@ tell.finish= 已完成！
 tell.reset= 已重置
 tell.quit= 已退出
 tell.levitation=§e获得状态效果 §h漂浮%s %s
-tell.slow_falling=§e获得状态效果 §h缓降%s %
+tell.slow_falling=§e获得状态效果 §h缓降%s %s
 
 
-tell.hint.01.1=不在路线上时，有5秒的时间调整姿势
-tell.hint.01.2=以有限的飘浮效果到达终点
+tell.hint.01.1=头顶没有方块遮挡时，有5秒的时间调整姿势
+tell.hint.01.2=以有限的飘浮效果到达终点信标处
+tell.hint.11.1=头顶没有方块遮挡时，有5秒的时间调整姿势
+tell.hint.11.2=跳起来能飞得更高
+tell.hint.12.2=落到粘液块上跳起来后获得飘浮
+tell.hint.13.2=有缓降能跳得越远

@@ -1,0 +1,1 @@
+tellraw @s { "rawtext": [{ "text": "[1-3]" },{ "translate": "tell.quit" }] }

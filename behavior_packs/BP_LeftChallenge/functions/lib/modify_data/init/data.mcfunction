@@ -19,6 +19,8 @@ scoreboard objectives add isOnline dummy "玩家在线"
 scoreboard objectives add state dummy "玩家状态"
 scoreboard objectives add chapter dummy "关卡章"
 scoreboard objectives add section dummy "关卡节"
+scoreboard objectives add levitation dummy "飘浮使用次数"
+scoreboard objectives add slow_falling dummy "缓降使用次数"
 
 # --- 数据变量重置 ---
 
@@ -26,12 +28,14 @@ scoreboard objectives add section dummy "关卡节"
 scoreboard players set @a isOnline 1
 scoreboard players set @a chapter 0
 scoreboard players set @a section 0
+scoreboard players set @a levitation 0
+scoreboard players set @a slow_falling 0
 
 ## 基础时间数据
 scoreboard players set tick time 0
 
 ## 时间线
-scoreboard players set timeline active 0
+scoreboard players set timeline active 1
 scoreboard players set timeline time 0
 scoreboard players set timeLapse data 0
 scoreboard players set keepValue data 0
