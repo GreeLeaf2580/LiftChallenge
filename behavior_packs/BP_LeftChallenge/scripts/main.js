@@ -8,6 +8,6 @@ const usableItems = [ "lc:quit","lc:reset","lc:hint","lc:levitation","lc:slow_fa
 // 检查是否使用了物品，如有则执行命令
 world.afterEvents.itemUse.subscribe( event => {
     if ( usableItems.includes( event.itemStack.typeId ) ) {
-        event.source.runCommand( `function items/${event.itemStack.typeId.split(":")[1]}` );
+        event.source.runCommand( `function lib/level/items/${event.itemStack.typeId.split(":")[1]}` );
     }
 } )

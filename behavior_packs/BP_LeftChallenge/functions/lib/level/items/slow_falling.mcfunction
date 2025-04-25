@@ -1,5 +1,5 @@
 #获得飘浮的枚举中间件函数
-#使用物品->items/slow_falling->levels/xx/events/slow_falling
+#使用物品->lib/level/items/slow_falling->levels/xx/events/slow_falling
 
 function lib/modify_states/sound/slow_falling
 

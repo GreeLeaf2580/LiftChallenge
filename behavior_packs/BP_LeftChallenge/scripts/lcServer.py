@@ -30,4 +30,4 @@ class lcServerSystem(ServerSystem):
         # } )
 
         if itemStack["newItemName"] in usableItems:
-            compFactory.CreateCommand(self.levelId).SetCommand("/function items/{}".format(itemStack["newItemName"].split(":")[1]), source, False)
+            compFactory.CreateCommand(self.levelId).SetCommand("/function lib/level/items/{}".format(itemStack["newItemName"].split(":")[1]), source, False)

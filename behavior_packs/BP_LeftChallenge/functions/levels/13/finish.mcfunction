@@ -1,7 +1,7 @@
 tellraw @a { "rawtext": [{ "text": "[1-3]" },{ "translate": "tell.finish" }] }
 
-structure load finish_ray 40 11 59
-setblock 42 10 57 beacon [] destroy
+structure load finish_ray 42 11 57
+setblock 44 10 59 beacon [] destroy
 
 
 function lib/level/next

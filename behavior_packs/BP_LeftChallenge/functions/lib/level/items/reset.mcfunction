@@ -1,5 +1,5 @@
 #重置关卡的中间件枚举函数
-#使用物品->items/reset->levels/xx/reset
+#使用物品->lib/level/items/reset->levels/xx/reset
 #播放末影人音效
 function lib/modify_states/sound/reset
 

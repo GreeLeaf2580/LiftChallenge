@@ -1,5 +1,5 @@
 #退出关卡的中间件枚举函数
-#使用物品->items/quit->levels/xx/quit
+#使用物品->lib/level/items/quit->levels/xx/quit
 
 #播放关闭末影箱的音效
 function lib/modify_states/sound/quit

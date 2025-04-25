@@ -1,5 +1,5 @@
 #获得飘浮的枚举中间件函数
-#使用物品->items/levitation->levels/xx/events/levitation
+#使用物品->lib/level/items/levitation->levels/xx/events/levitation
 
 function lib/modify_states/sound/levitation
 
