@@ -16,9 +16,10 @@ execute as @a[scores={chapter=0,section=0}] at @s if entity @a[scores={chapter=0
 execute as @a[scores={chapter=0,section=0}]  at @s if entity @a[rm=1,scores={chapter=0,section=0}] run effect @s invisibility 0 2 true
 execute as @a[scores={chapter=0,section=0}]  at @s if entity @a[rm=1,scores={chapter=0,section=0}] run replaceitem entity @s slot.armor.feet 0 air
 
-execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 air replace command_block
-execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 air replace minecraft:chain_command_block
-execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 air replace minecraft:repeating_command_block
+# execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 minecraft:white_concrete replace minecraft:cyan_terracotta
+# execute as @a at @s run fill ~-15 ~-10 ~-15   ~15 ~10 ~15 minecraft:white_concrete replace brown_mushroom_block ["huge_mushroom_bits"=15]
+
+
 
 execute if entity @a[scores={chapter=0,section=0}] run function hall/entrance/timeline
 

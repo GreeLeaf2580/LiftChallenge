@@ -1,9 +1,9 @@
 {
     "format_version": 2,
     "header": {
-        "name": "升空挑战LeftChallenge行为包",
-        "description": "升空挑战LeftChallenge地图配套行为包。技术支持@一只卑微的量筒",
-        "uuid": "8e1ebb14-8dda-4d2b-a604-6f21f91b5fb3",
+        "name": "升空挑战LiftChallenge行为包",
+        "description": "升空挑战LiftChallenge地图配套行为包。技术支持@一只卑微的量筒、@lanos212",
+        "uuid": "eec60bcb-0f5b-4cc4-afce-f51d7c989371",
         "version": [ 1, 0, 0 ],
         "min_engine_version": [ 1, 20, 50 ]
     },
@@ -11,12 +11,12 @@
         {
             "type": "data",
             "version": [ 1, 0, 0 ],
-            "uuid": "c269493f-04d9-499d-bc6f-2147efef94d6"
+            "uuid": "8cc80ec6-4328-4fea-b3f8-c85084ec145c"
         },
         {
             "type": "script",
             "version": [ 1, 0, 0 ],
-            "uuid": "3158b0b1-402f-4c9d-8de6-ba76645db4ea",
+            "uuid": "8f0ab0fd-d686-4334-be62-031f9ed597e4",
             "entry": "scripts/main.js",
             "language": "javascript"
         }

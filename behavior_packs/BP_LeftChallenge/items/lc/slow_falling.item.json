@@ -1,11 +1,12 @@
 {
-    "format_version": "1.20.0",
+    "format_version": "1.20.50",
     "minecraft:item": {
         "description": {
             "identifier": "lc:slow_falling"
         },
         "components": {
-            "minecraft:icon": "slow_falling"
+            "minecraft:icon": "slow_falling",
+            "minecraft:interact_button":"item.use"
         }
     }
 }

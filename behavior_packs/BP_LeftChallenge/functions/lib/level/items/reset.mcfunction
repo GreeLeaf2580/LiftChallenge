@@ -12,6 +12,9 @@ xp -1000L @s
 #清除被该关卡选中的玩家背包
 clear @s
 
+#初始给予 1 秒剩余时长，避免出现问题
+scoreboard players set @s restTime 20
+
 #给予被选中玩家物品
     #给予“提示”
     replaceitem entity @s slot.hotbar 6 lc:hint 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}

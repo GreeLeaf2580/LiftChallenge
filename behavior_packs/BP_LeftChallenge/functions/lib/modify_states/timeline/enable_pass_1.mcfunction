@@ -13,3 +13,5 @@
 scoreboard players set timeline active 1
 ## 将时间线归零
 scoreboard players set timeline time 0
+
+# titleraw @s actionbar {"rawtext":[{"translate":"title.exposeTime","with":["0"]}]}

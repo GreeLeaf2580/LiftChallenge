@@ -22,6 +22,11 @@ scoreboard objectives add section dummy "关卡节"
 scoreboard objectives add levitation dummy "飘浮使用次数"
 scoreboard objectives add slow_falling dummy "缓降使用次数"
 
+scoreboard objectives add isInSky dummy "是否在空中"
+scoreboard objectives add isJumping dummy "是否跳跃"
+scoreboard objectives add lastRestTime dummy "玩家暴露的死亡时间"
+scoreboard objectives add restTime dummy "玩家暴露的剩余时间"
+
 # --- 数据变量重置 ---
 
 ## 玩家数据

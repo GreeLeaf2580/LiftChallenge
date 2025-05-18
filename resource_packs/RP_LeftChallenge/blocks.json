@@ -1,0 +1,43 @@
+{
+"format_version":"1.20.50",
+"lc:number_block_0":{
+"textures": "number_block_0",
+"sound":"stone"
+},
+"lc:number_block_1":{
+"textures": "number_block_1",
+"sound":"stone"
+},
+"lc:number_block_2":{
+"textures": "number_block_2",
+"sound":"stone"
+},
+"lc:number_block_3":{
+"textures": "number_block_3",
+"sound":"stone"
+},
+"lc:number_block_4":{
+"textures": "number_block_4",
+"sound":"stone"
+},
+"lc:number_block_5":{
+"textures": "number_block_5",
+"sound":"stone"
+},
+"lc:number_block_6":{
+"textures": "number_block_6",
+"sound":"stone"
+},
+"lc:number_block_7":{
+"textures": "number_block_7",
+"sound":"stone"
+},
+"lc:number_block_8":{
+"textures": "number_block_8",
+"sound":"stone"
+},
+"lc:number_block_9":{
+"textures": "number_block_9",
+"sound":"stone"
+}
+}

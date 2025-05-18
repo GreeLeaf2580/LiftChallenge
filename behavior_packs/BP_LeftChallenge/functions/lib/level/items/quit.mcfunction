@@ -13,6 +13,8 @@ effect @s clear
 #清除经验等级
 xp -1000L @s
 
+titleraw @s actionbar { "rawtext": [{ "text": "" }] }
+
 execute if score @s chapter matches 0.. run tp @s 33 10 54 0 0
 
 function lib/modify_states/timeline/enable_pass_1

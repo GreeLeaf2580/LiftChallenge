@@ -1,0 +1,38 @@
+{
+"resource_pack_name": "vanilla",
+"texture_name": "atlas.terrain",
+"padding": 8,
+"num_mip_levels": 4,
+"texture_data": {
+"number_block_0": {
+"textures":"textures/blocks/number_block_0"
+},
+"number_block_1": {
+"textures":"textures/blocks/number_block_1"
+},
+"number_block_2": {
+"textures":"textures/blocks/number_block_2"
+},
+"number_block_3": {
+"textures":"textures/blocks/number_block_3"
+},
+"number_block_4": {
+"textures":"textures/blocks/number_block_4"
+},
+"number_block_5": {
+"textures":"textures/blocks/number_block_5"
+},
+"number_block_6": {
+"textures":"textures/blocks/number_block_6"
+},
+"number_block_7": {
+"textures":"textures/blocks/number_block_7"
+},
+"number_block_8": {
+"textures":"textures/blocks/number_block_8"
+},
+"number_block_9": {
+"textures":"textures/blocks/number_block_9"
+}
+}
+}

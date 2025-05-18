@@ -6,4 +6,4 @@ execute unless score tick time matches 0..19 run scoreboard players set tick tim
 
 # --- time.timeline ---
 # 仅启用后执行
-execute if score timeline active matches 1.. run scoreboard players operation timeline time += timeLapse data
+# execute if score timeline active matches 1.. run scoreboard players operation timeline time += timeLapse data
