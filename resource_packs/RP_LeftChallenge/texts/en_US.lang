@@ -11,3 +11,6 @@ item.LC:hint=§eHint
 item.lc:levitation=Get Levitation Effect
 item.lc:slow_falling=Get Slow Falling Effect
 
+## ===== 实体 =====
+
+entity.lc:text_display.name=Text Display

@@ -5,4 +5,4 @@ scoreboard players operation tempSecond restTime = @s restTime
 scoreboard players add tempSecond restTime 19
 scoreboard players set "20" restTime 20
 scoreboard players operation tempSecond restTime /= "20" restTime
-execute as @a[scores={section=!0}] at @s run titleraw @s actionbar {"rawtext":[{"translate":"title.exposeTime","with":{"rawtext":[{"score":{"name":"tempSecond","objective":"restTime"}}]}}]}
+titleraw @s[scores={section=!0}] actionbar {"rawtext":[{"translate":"title.exposeTime","with":{"rawtext":[{"score":{"name":"tempSecond","objective":"restTime"}}]}}]}

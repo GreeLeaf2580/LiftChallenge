@@ -1,10 +1,15 @@
 {
     "entity_sounds": {
         "entities": {
-            "LC:npc": {
+            "lc:npc": {
                 "events": {
                     "death": { "sound": "", "volume": 0 },
                     "hurt": { "sound": "", "volume": 0 }
+                }
+            },
+            "lc:text_display":{
+                "events":{
+                    "death":{"sound": "", "volume": 0}
                 }
             }
         }

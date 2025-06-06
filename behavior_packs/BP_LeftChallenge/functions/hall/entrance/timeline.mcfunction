@@ -1,6 +1,8 @@
 #开始timeline枚举
 
+execute positioned 33 10 65 if entity @a[r=13] unless entity @e[type=lc:text_display,r=13] run function hall/show_level_name/farside
 
+execute positioned 33 10 65 unless entity @a[r=12] as @e[type=lc:text_display,r=13] run event entity @s lc:remove_immediately
 
 #当玩家踩到信标时传送到对应的关卡
 #播放打开末影箱的音效

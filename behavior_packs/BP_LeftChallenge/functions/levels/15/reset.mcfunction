@@ -5,8 +5,10 @@ title @s subtitle 1-5
 
 scoreboard players set failTime active 100
 
-give @s lc:slow_falling 1
-scoreboard players set @s slow_falling 1
+give @s lc:levitation 1
+scoreboard players set @s levitation 1
+
+effect @s instant_health 1 9 true
 
 
 function lib/modify_states/timeline/enable_pass_1

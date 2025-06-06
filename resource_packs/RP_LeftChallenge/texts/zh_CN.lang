@@ -11,6 +11,10 @@ item.lc:levitation=获取飘浮效果
 item.lc:slow_falling=获取缓降效果
 item.use=使用
 
+## ===== 实体 =====
+
+entity.lc:text_display.name=文本展示
+
 ## ===== 方块 =====
 
 tile.lc:number_block_0.name=数字方块 0
@@ -30,7 +34,7 @@ title.01=远处教程
 title.11=树荫
 title.12=弹跳
 title.13=缓降
-title.14=协同
+title.14=歧路
 title.15=树林之主
 
 
