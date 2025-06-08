@@ -51,7 +51,7 @@ execute if score sound time matches 0 if score sound active matches 17 as @a at 
 execute if score sound time matches 0 if score sound active matches 17 as @a at @s run summon fireworks_rocket ~~~
 
 ## 18 | mob.endermen.portal | 音调1
-execute if score sound time matches 0 if score sound active matches 18 at @s run playsound mob.endermen.portal @s ~ ~ ~ 10 1 10
+execute if score sound time matches 0 if score sound active matches 18 as @a at @s run playsound mob.endermen.portal @s ~ ~ ~ 10 1 10
 
 ## 19 | random.toast | 音调1
 execute if score sound time matches 0 if score sound active matches 19 as @a[scores={section=!0}] at @s run playsound random.toast @s ~ ~ ~ 10 1 10

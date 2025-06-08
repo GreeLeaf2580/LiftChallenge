@@ -8,6 +8,8 @@ scoreboard players set failTime active 100
 
 give @s lc:levitation
 
-structure load compass01 150 43 150
+#关卡终点指南针
+#/structure save compass01 149 40 150  149 40 150 disk
+structure load compass01 149 40 150
 
 function lib/modify_states/timeline/enable_pass_1

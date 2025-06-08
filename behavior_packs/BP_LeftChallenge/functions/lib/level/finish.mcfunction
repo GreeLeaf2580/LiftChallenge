@@ -4,12 +4,14 @@
 #播放通关的音效
 function lib/modify_states/sound/cheer
 
-
 #清除被该关卡选中的玩家背包
 clear @s
 
 #清除药水效果
 effect @s clear
+
+#给玩家回血
+effect @s instant_health 1 9 true
 
 #清除经验等级
 xp -1000L @s

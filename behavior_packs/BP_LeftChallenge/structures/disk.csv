@@ -1,7 +1,5 @@
 name,info
-mystructure:_14,1-4关的结构
 mystructure:cloud,旧飘浮效果图标的像素画（云）
-mystructure:compass01,存有0-1关磁指南针的白色潜影盒
-mystructure:compass11,存有0-1关磁指南针的白色潜影盒
+mystructure:compassCS,存有C-S关磁指南针的白色潜影盒
 mystructure:finish_ray,大厅的末地烛光烛
 mystructure:option,选项房间

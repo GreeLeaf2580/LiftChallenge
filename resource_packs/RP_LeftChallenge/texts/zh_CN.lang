@@ -27,6 +27,14 @@ tile.lc:number_block_6.name=数字方块 6
 tile.lc:number_block_7.name=数字方块 7
 tile.lc:number_block_8.name=数字方块 8
 tile.lc:number_block_9.name=数字方块 9
+## ===== 大厅文字 =====
+display.farside=远处
+display.highside=高处
+display.option=选项
+display.welcome=欢迎
+
+display.option.farside.jumpToUseItem=空中跳跃以使用物品
+display.option.farside.noRestTime=关闭倒计时
 
 ## ===== 标题 =====
 title.exposeTime=剩余时间 %s秒
@@ -39,6 +47,12 @@ title.15=树林之主
 
 
 ## ===== 对话 =====
+
+##重置进度
+tell.restart.notice=§4[!警告!]如果确定重置该进度，请1秒内再按一次
+tell.restart.recover=§4[!警告!]§f重置按钮已恢复
+tell.restart.init_levels=§4[!警告!]已重置该进度
+
 tell.failmsg.out_world=%s 掉出了世界
 tell.failmsg.sun_burnt=%s 晒伤了
 tell.failmsg.left_out=%s 飘走了
