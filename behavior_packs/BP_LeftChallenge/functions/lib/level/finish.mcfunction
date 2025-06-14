@@ -23,4 +23,4 @@ execute if score @s chapter matches 0.. run tp @s 33 10 54 0 0
 scoreboard players set @s chapter 0
 scoreboard players set @s section 0
 
-function lib/modify_states/timeline/enable_pass_1
+

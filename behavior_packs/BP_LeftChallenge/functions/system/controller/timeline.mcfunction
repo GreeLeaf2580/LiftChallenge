@@ -22,11 +22,30 @@ execute as @a[m=a]  at @s if entity @a[rm=1,m=a] run replaceitem entity @s slot.
 
 
 
-execute as @a[scores={chapter=0,section=0}] run function hall/entrance/timeline
+execute as @a[scores={chapter=0,section=0}] run function hall/timeline
 
 execute as @a[scores={chapter=0,section=1}] run function levels/01/timeline
+
 execute as @a[scores={chapter=1,section=1}] run function levels/11/timeline
 execute as @a[scores={chapter=1,section=2}] run function levels/12/timeline
 execute as @a[scores={chapter=1,section=3}] run function levels/13/timeline
 execute as @a[scores={chapter=1,section=4}] run function levels/14/timeline
 execute as @a[scores={chapter=1,section=5}] run function levels/15/timeline
+
+execute as @a[scores={chapter=2,section=1}] run function levels/21/timeline
+execute as @a[scores={chapter=2,section=2}] run function levels/22/timeline
+execute as @a[scores={chapter=2,section=3}] run function levels/23/timeline
+execute as @a[scores={chapter=2,section=4}] run function levels/24/timeline
+execute as @a[scores={chapter=2,section=5}] run function levels/25/timeline
+
+execute as @a[scores={chapter=3,section=1}] run function levels/31/timeline
+execute as @a[scores={chapter=3,section=2}] run function levels/32/timeline
+execute as @a[scores={chapter=3,section=3}] run function levels/33/timeline
+execute as @a[scores={chapter=3,section=4}] run function levels/34/timeline
+execute as @a[scores={chapter=3,section=5}] run function levels/35/timeline
+
+execute as @a[scores={chapter=4,section=1}] run function levels/41/timeline
+execute as @a[scores={chapter=4,section=2}] run function levels/42/timeline
+execute as @a[scores={chapter=4,section=3}] run function levels/43/timeline
+execute as @a[scores={chapter=4,section=4}] run function levels/44/timeline
+execute as @a[scores={chapter=4,section=5}] run function levels/45/timeline

@@ -1,1 +1,0 @@
-tellraw @s { "rawtext": [{ "translate": "tell.hint.12.1" }] }

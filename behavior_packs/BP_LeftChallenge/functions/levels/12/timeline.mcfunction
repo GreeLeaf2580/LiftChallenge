@@ -1,6 +1,6 @@
 
 #当玩家失败判定
-execute at @s run function lib/level/timeline/is_fail
+execute at @s run function lib/level/is_fail/timeline
 
 # 524 9 30
-execute at @s[x=524,y=10,z=30,dx=0,dy=1,dz=0] run function levels/12/finish
+execute at @s[x=523,y=10,z=29,dx=1,dy=1,dz=1] run function levels/12/finish

@@ -4,3 +4,5 @@
 scoreboard players set sound active 21
 ## 将音效播放器时间重置
 scoreboard players set sound time 3
+
+tag @s add sound

@@ -10,6 +10,9 @@ clear @s
 #清除药水效果
 effect @s clear
 
+#给玩家回血
+effect @s instant_health 1 9 true
+
 #清除经验等级
 xp -1000L @s
 
@@ -17,7 +20,7 @@ titleraw @s actionbar { "rawtext": [{ "text": "" }] }
 
 execute if score @s chapter matches 0.. run tp @s 33 10 54 0 0
 
-function lib/modify_states/timeline/enable_pass_1
+
 
 execute if score @s chapter matches 0 if score @s section matches 1 run function levels/01/quit
 execute if score @s chapter matches 1 if score @s section matches 1 run function levels/11/quit

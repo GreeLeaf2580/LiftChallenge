@@ -27,14 +27,6 @@ tile.lc:number_block_6.name=数字方块 6
 tile.lc:number_block_7.name=数字方块 7
 tile.lc:number_block_8.name=数字方块 8
 tile.lc:number_block_9.name=数字方块 9
-## ===== 大厅文字 =====
-display.farside=远处
-display.highside=高处
-display.option=选项
-display.welcome=欢迎
-
-display.option.farside.jumpToUseItem=空中跳跃以使用物品
-display.option.farside.noRestTime=关闭倒计时
 
 ## ===== 标题 =====
 title.exposeTime=剩余时间 %s秒
@@ -44,6 +36,9 @@ title.12=弹跳
 title.13=缓降
 title.14=歧路
 title.15=树林之主
+title.21=贪婪
+title.22=覆盖
+title.23=盲盒商场
 
 
 ## ===== 对话 =====
@@ -55,7 +50,8 @@ tell.restart.init_levels=§4[!警告!]已重置该进度
 
 tell.failmsg.out_world=%s 掉出了世界
 tell.failmsg.sun_burnt=%s 晒伤了
-tell.failmsg.left_out=%s 飘走了
+tell.failmsg.lift_out=%s 飘走了
+tell.failmsg.headache=%s 磕到了
 tell.finish= 已完成！
 tell.reset= 已重置
 tell.quit= 已退出

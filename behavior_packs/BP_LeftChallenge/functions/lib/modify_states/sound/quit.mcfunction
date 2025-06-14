@@ -4,3 +4,5 @@
 
     #播放选定的音效
     scoreboard players set sound active 15
+
+    tag @s add sound

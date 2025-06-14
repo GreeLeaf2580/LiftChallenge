@@ -21,6 +21,7 @@ scoreboard objectives add chapter dummy "关卡章"
 scoreboard objectives add section dummy "关卡节"
 scoreboard objectives add levitation dummy "飘浮使用次数"
 scoreboard objectives add slow_falling dummy "缓降使用次数"
+scoreboard objectives add chest dummy "陷阱箱打开次数"
 
 scoreboard objectives add isInSky dummy "是否在空中"
 scoreboard objectives add isJumping dummy "是否跳跃"
@@ -35,6 +36,7 @@ scoreboard players set @a chapter 0
 scoreboard players set @a section 0
 scoreboard players set @a levitation 0
 scoreboard players set @a slow_falling 0
+scoreboard players set @a chest 0
 
 ## 基础时间数据
 scoreboard players set tick time 0
