@@ -8,7 +8,6 @@ structure load compass23 248 9 -49
 
 scoreboard players set failTime active 100
 
-scoreboard players set @s chest 5
 
 
 

@@ -3,7 +3,6 @@
 #播放末影人音效
 function lib/modify_states/sound/reset
 
-
 #清除药水效果
 effect @s clear
 
@@ -32,3 +31,4 @@ scoreboard players set @s restTime 20
 function lib/level/enum/tp
 
 function lib/level/enum/reset
+

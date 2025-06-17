@@ -1,4 +1,4 @@
-#播放幻翼振翅音效 21 | mob.phantom.flap | 音调1
+#播放蝙蝠起飞音效 21 | mob.bat.takeoff | 音调1
 
 ## 启用音效播放器
 scoreboard players set sound active 21

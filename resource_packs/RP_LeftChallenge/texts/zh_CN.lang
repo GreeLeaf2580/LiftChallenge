@@ -36,9 +36,11 @@ title.12=弹跳
 title.13=缓降
 title.14=歧路
 title.15=树林之主
-title.21=贪婪
+title.21=解除
 title.22=覆盖
 title.23=盲盒商场
+title.24=附加
+title.25=多余
 
 
 ## ===== 对话 =====
@@ -55,8 +57,12 @@ tell.failmsg.headache=%s 磕到了
 tell.finish= 已完成！
 tell.reset= 已重置
 tell.quit= 已退出
-tell.levitation=§e获得状态效果 §h漂浮%s %s
-tell.slow_falling=§e获得状态效果 §h缓降%s %s
+tell.while=、 
+tell.effect=§e获得状态效果 
+tell.levitation=§h漂浮%s %s
+tell.slow_falling=§h缓降%s %s
+tell.jump_boost=§h跳跃提升%s %s
+tell.instant_damage=§h瞬间伤害
 
 
 tell.hint.01.1=头顶没有方块遮挡时，有5秒的时间调整姿势

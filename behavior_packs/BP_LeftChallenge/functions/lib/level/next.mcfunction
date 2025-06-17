@@ -29,3 +29,5 @@ scoreboard players add @s section 1
     replaceitem entity @s slot.hotbar 8 lc:quit 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 
 function lib/level/enum/reset
+
+function lib/level/enum/spawnpoint

@@ -8,7 +8,16 @@
 # · 若玩家存活，则有isAlive标签；若处于死亡状态，则移除isAlive标签
 
 # --- 主体部分 ---
-# 假定所有玩家均未存活（@a对全体玩家生效）
-tag @a remove isAlive
-# 为存活玩家添加存活标签（@e[type=player]仅对存活玩家生效）
-tag @e[type=player] add isAlive
+# ===== 死亡机制 =====
+# 判定死亡玩家并执行命令。
+
+# --- 运行死亡榜 ---
+scoreboard players set @a[scores={deathState=!2}] deathState 1
+scoreboard players set @e[type=player] deathState 0
+
+execute as @a[scores={deathState=1}] run function lib/level/items/reset
+
+scoreboard players set @a[scores={deathState=1}] deathState 2
+
+# --- 死亡的玩家执行的命令 ---
+

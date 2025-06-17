@@ -21,12 +21,16 @@ scoreboard objectives add chapter dummy "关卡章"
 scoreboard objectives add section dummy "关卡节"
 scoreboard objectives add levitation dummy "飘浮使用次数"
 scoreboard objectives add slow_falling dummy "缓降使用次数"
-scoreboard objectives add chest dummy "陷阱箱打开次数"
 
 scoreboard objectives add isInSky dummy "是否在空中"
 scoreboard objectives add isJumping dummy "是否跳跃"
 scoreboard objectives add lastRestTime dummy "玩家暴露的死亡时间"
 scoreboard objectives add restTime dummy "玩家暴露的剩余时间"
+
+## 玩家死亡信息
+scoreboard objectives add deathState dummy "死亡状态"
+scoreboard players set @a deathState 0
+
 
 # --- 数据变量重置 ---
 
@@ -36,7 +40,6 @@ scoreboard players set @a chapter 0
 scoreboard players set @a section 0
 scoreboard players set @a levitation 0
 scoreboard players set @a slow_falling 0
-scoreboard players set @a chest 0
 
 ## 基础时间数据
 scoreboard players set tick time 0

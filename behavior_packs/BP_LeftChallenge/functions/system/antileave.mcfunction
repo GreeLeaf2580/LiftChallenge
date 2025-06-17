@@ -13,12 +13,6 @@ scoreboard players add @a isOnline 0
     execute as @a[scores={isOnline=0}] at @s run scoreboard players set @s chapter 0
     execute as @a[scores={isOnline=0}] at @s run scoreboard players set @s section 0
 
-
-function lib/get_data/player_is_alive
-
-#玩家死亡则回到大厅
-execute as @a[tag=!isAlive] at @s run function lib/level/items/quit
-
 ## 获取当前玩家使用的版本
 execute as @a[scores={isOnline=0}] at @s run function lib/get_data/client
 

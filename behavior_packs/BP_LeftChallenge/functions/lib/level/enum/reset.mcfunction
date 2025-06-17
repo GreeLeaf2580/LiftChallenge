@@ -1,3 +1,4 @@
+
 execute if score @s chapter matches 0 if score @s section matches 1 run function levels/01/reset
 
 execute if score @s chapter matches 1 if score @s section matches 1 run function levels/11/reset

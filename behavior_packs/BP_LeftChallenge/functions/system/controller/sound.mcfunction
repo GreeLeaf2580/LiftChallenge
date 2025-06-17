@@ -43,8 +43,8 @@ execute if score sound time matches 0 if score sound active matches 14 as @a[tag
 execute if score sound time matches 0 if score sound active matches 15 as @a[tag=sound,scores={chapter=0,section=0}] at @s run playsound random.enderchestclosed @s ~ ~ ~ 1 1
 
 ## 16 | random.levelup | 音调0.5
-execute if score sound time matches 0 if score sound active matches 16 as @a[tag=sound] at @s run playsound random.levelup @s ~~~ 1 0.5
-execute if score sound time matches 0 if score sound active matches 16 as @a[tag=sound] at @s run summon fireworks_rocket ~~~
+execute if score sound time matches 0 if score sound active matches 16 as @a at @s run playsound random.levelup @s ~~~ 1 0.5
+execute if score sound time matches 0 if score sound active matches 16 as @a at @s run summon fireworks_rocket ~~~
 
 ## 17 | random.toast_challenge_complete | 音调1
 execute if score sound time matches 0 if score sound active matches 17 as @a at @s run playsound random.toast_challenge_complete @s ~~~
@@ -59,11 +59,11 @@ execute if score sound time matches 0 if score sound active matches 19 as @a[tag
 ## 20 | beacon.activate | 音调1
 execute if score sound time matches 0 if score sound active matches 20 as @a[tag=sound] at @s run playsound beacon.activate @s ~ ~ ~ 10 1 10
 
-## 21 | mob.phantom.flap | 音调1
-execute if score sound time matches 0 if score sound active matches 21 at @s run playsound mob.phantom.flap @s ~ ~ ~ 10 1 10
+## 21 | mob.bat.takeoff | 音调1
+execute if score sound time matches 0 if score sound active matches 21 as @a[tag=sound] at @s run playsound mob.bat.takeoff @s ~ ~ ~ 10 1 10
 
-## 22 | mob.parrot.fly | 音调1
-execute if score sound time matches 0 if score sound active matches 22 at @s run playsound mob.parrot.fly @s ~ ~ ~ 10 1 10
+## 22 | mob.phantom.flap | 音调1
+execute if score sound time matches 0 if score sound active matches 22 as @a[tag=sound] at @s run playsound mob.phantom.flap @s ~ ~ ~ 10 1 10
 # --- 重置音效播放器 ---
 # 当音效倒计时为0后执行
 execute if score sound time matches 0 run tag @a remove sound
