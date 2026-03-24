@@ -12,3 +12,4 @@ execute if score @s chapter matches 2 if score @s section matches 1 run spawnpoi
 execute if score @s chapter matches 2 if score @s section matches 2 run spawnpoint @s 242 10 0
 execute if score @s chapter matches 2 if score @s section matches 3 run spawnpoint @s 248 10 -48
 execute if score @s chapter matches 2 if score @s section matches 4 run spawnpoint @s 220 10 -96
+execute if score @s chapter matches 2 if score @s section matches 5 run spawnpoint @s 305 10 -78

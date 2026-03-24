@@ -18,3 +18,6 @@ diagnostic.disable.behaviorpack.structures.missing=true
 diagnostic.disable.behaviorpack.blocks.missing=true
 diagnostic.disable.behaviorpack.trading.missing=true
 diagnostic.disable.behaviorpack.trading.missing=true
+diagnostic.disable.minecraft.tag.missing=true
+diagnostic.disable.minecraft.tag.missing=true
+diagnostic.disable.minecraft.tag.missing=true

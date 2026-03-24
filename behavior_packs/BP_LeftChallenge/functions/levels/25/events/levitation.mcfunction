@@ -1,0 +1,12 @@
+
+execute if score @s levitation matches 4 run effect @s levitation 1 3 true
+execute if score @s levitation matches 4 run tellraw @s { "rawtext": [{ "translate": "tell.effect" },{ "translate": "tell.levitation", "with": ["III","0:01"] } ] }
+
+execute if score @s levitation matches 3 run effect @s levitation 3 15 true
+execute if score @s levitation matches 3 run tellraw @s { "rawtext": [{ "translate": "tell.effect" },{ "translate": "tell.levitation", "with": ["XV","0:03"] } ] }
+
+execute if score @s levitation matches 2 run effect @s levitation 1 5 true
+execute if score @s levitation matches 2 run tellraw @s { "rawtext": [{ "translate": "tell.effect" },{ "translate": "tell.levitation", "with": ["V","0:01"] } ] }
+
+execute if score @s levitation matches 1 run effect @s levitation 1 3 true
+execute if score @s levitation matches 1 run tellraw @s { "rawtext": [{ "translate": "tell.effect" },{ "translate": "tell.levitation", "with": ["III","0:01"] } ] }

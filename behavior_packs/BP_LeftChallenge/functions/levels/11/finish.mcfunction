@@ -4,3 +4,8 @@ structure load finish_ray 38 11 60
 setblock 40 10 59 beacon [] destroy
 
 function lib/level/next
+
+tellraw @s { "rawtext": [{ "text": "[1-2]" },{ "translate": "tell.reset" }] }
+
+titleraw @s title { "rawtext": [{ "translate": "title.12" }] }
+title @s subtitle 1-2

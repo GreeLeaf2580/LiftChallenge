@@ -14,3 +14,4 @@ execute if score @s chapter matches 2 if score @s section matches 1 run tp @s 30
 execute if score @s chapter matches 2 if score @s section matches 2 run tp @s 242 10 0   180 0
 execute if score @s chapter matches 2 if score @s section matches 3 run tp @s 248 10 -48  180 0
 execute if score @s chapter matches 2 if score @s section matches 4 run tp @s 220 10 -96  -90 0
+execute if score @s chapter matches 2 if score @s section matches 5 run tp @s 305 10 -78   0 0

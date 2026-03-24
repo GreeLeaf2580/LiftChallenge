@@ -1,7 +1,4 @@
-tellraw @s { "rawtext": [{ "text": "[1-4]" },{ "translate": "tell.reset" }] }
 
-titleraw @s title { "rawtext": [{ "translate": "title.14" }] }
-title @s subtitle 1-4
 
 #指南针结构 structure save compass14 554 9 53   554 9 53 disk
 structure load compass14 554 9 53
