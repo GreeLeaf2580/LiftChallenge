@@ -8,6 +8,7 @@ scoreboard players set failTime active 100
 #给玩家回血
 effect @s instant_health 1 9 true
 
+loot replace entity @s slot.hotbar 6 loot "farside/book15"
 give @s lc:slow_falling 1
 scoreboard players set @s slow_falling 1
 

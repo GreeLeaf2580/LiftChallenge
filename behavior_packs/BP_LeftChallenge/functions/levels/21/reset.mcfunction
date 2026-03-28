@@ -6,6 +6,7 @@ structure load compass21 299 9 0
 
 scoreboard players set failTime active 100
 
+loot replace entity @s slot.hotbar 6 loot "farside/book21"
 give @s lc:levitation 2
 scoreboard players set @s levitation 3
 

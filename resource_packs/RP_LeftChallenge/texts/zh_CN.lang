@@ -59,10 +59,10 @@ tell.reset= 已重置
 tell.quit= 已退出
 tell.while=、 
 tell.effect=§e获得状态效果 
-tell.levitation=§h漂浮%s %s
-tell.slow_falling=§h缓降%s %s
-tell.jump_boost=§h跳跃提升%s %s
-tell.instant_damage=§h瞬间伤害
+tell.levitation=§r漂浮%s %s
+tell.slow_falling=§r缓降%s %s
+tell.jump_boost=§r跳跃提升%s %s
+tell.instant_damage=§r瞬间伤害
 
 
 tell.hint.01.1=头顶没有方块遮挡时，有5秒的时间调整姿势

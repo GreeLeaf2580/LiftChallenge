@@ -7,6 +7,7 @@ scoreboard players set failTime active 100
 
 scoreboard players set @s chest 1
 
+loot replace entity @s slot.hotbar 6 loot "farside/book24"
 give @s lc:slow_falling 2
 scoreboard players set @s slow_falling 2
 

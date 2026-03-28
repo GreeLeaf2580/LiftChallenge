@@ -5,6 +5,7 @@ structure load compass14 554 9 53
 
 scoreboard players set failTime active 100
 
+loot replace entity @s slot.hotbar 6 loot "farside/book14"
 give @s lc:slow_falling 1
 scoreboard players set @s slow_falling 1
 

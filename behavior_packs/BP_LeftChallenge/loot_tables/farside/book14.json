@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "name": "minecraft:written_book",
+          "type": "item",
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "GreeLeaf",
+              "title": "§r§fPreview",
+              "pages": [
+                "{\"rawtext\": [{ \"translate\": \"tell.slow_falling\"},{\"text\":\"\nI 0:03\"} ]}"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

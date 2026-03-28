@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "name": "minecraft:written_book",
+          "type": "item",
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "author": "GreeLeaf",
+              "title": "§r§fPreview",
+              "pages": [
+                "{\"rawtext\": [ { \"translate\": \"tell.slow_falling\", \"with\": [\"\",\"0:03\"] },{ \"translate\": \"tell.while\" },{ \"translate\": \"tell.jump_boost\", \"with\": [\"II\",\"0:02\"] } ] },{\"text\":\"\n\"},{ \"rawtext\": [{ \"translate\": \"tell.effect\" },{ \"translate\": \"tell.slow_falling\", \"with\": [\"\",\"0:05\"] },{ \"translate\": \"tell.while\" },{ \"translate\": \"tell.instant_damage\" } ] }",
+                "{\"rawtext\": [{\"text\":\"249 14 -80 tp Yes\n266 7 -98 tp No\"}]}"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
