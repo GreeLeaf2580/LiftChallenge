@@ -20,7 +20,7 @@ scoreboard players add @s section 1
 
 #给予被选中玩家物品
     #给予“提示”
-    execute if score @s chapter matches 4 run replaceitem entity @s slot.hotbar 6 lc:hint 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+    execute if score @s chapter matches 4 run replaceitem entity @s slot.hotbar 5 lc:hint 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 
     #给予“重置关卡”
     replaceitem entity @s slot.hotbar 7 lc:reset 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}

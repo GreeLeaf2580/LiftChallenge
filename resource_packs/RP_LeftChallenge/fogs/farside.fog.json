@@ -1,0 +1,16 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:fog_settings": {
+        "description": {
+            "identifier": "lc:farside_fog"
+        },
+        "distance": {
+            "air": {
+                "fog_start": 50,
+                "fog_end": 100,
+                "fog_color": "#abd2ff",
+                "render_distance_type": "fixed"
+            }
+        }
+    }
+}

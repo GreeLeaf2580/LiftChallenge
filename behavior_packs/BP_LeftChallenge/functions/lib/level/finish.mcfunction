@@ -18,8 +18,10 @@ xp -1000L @s
 
 titleraw @s actionbar { "rawtext": [{ "text": "" }] }
 
+#如果玩家在远处模式，则传送回远处模式的大厅
 execute if score @s chapter matches 0.. run tp @s 33 10 54 0 0
 
+#清除计分项
 scoreboard players set @s chapter 0
 scoreboard players set @s section 0
 

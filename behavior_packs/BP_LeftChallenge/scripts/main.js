@@ -1,42 +1,90 @@
-// 可使用物品（国际版）
+// @ts-check
 
-import { world, system } from "@minecraft/server";
-
-const overWorld = world.getDimension("overworld");
-
-// 读取计分项
-const IsJumping=world.scoreboard.getObjective("isJumping");
-const IsInSky=world.scoreboard.getObjective("isInSky");
-const data=world.scoreboard.getObjective("data");
+import { world, system, Player } from "@minecraft/server";
 
 /** 可执行命令的物品 */
-const usableItems = [ "lc:quit","lc:reset","lc:hint","lc:levitation","lc:slow_falling" ];
-const usableEffectItems = [ "lc:levitation","lc:slow_falling" ];
+const usableItems = ["lc:quit", "lc:reset", "lc:hint", "lc:levitation", "lc:slow_falling"];
+const usableEffectItems = ["lc:levitation", "lc:slow_falling"];
+
+/**
+ * @param {string} objectiveId 
+ * @param {string} displayName 
+ */
+function getScoreboard(objectiveId, displayName) {
+    return world.scoreboard.getObjective(objectiveId) ?? world.scoreboard.addObjective(objectiveId, displayName);
+};
+
+system.afterEvents.scriptEventReceive.subscribe(event => {
+    /** @type {Player} */ // @ts-ignore
+    const player = event.sourceEntity;
+    if (!player) return;
+    if (player.typeId !== "minecraft:player") return;
+    const eventType = event.id.split(":")[1];
+
+    const chapterObj = getScoreboard("chapter", "关卡章");
+    const sectionObj = getScoreboard("section", "关卡节");
+    const chapter = chapterObj.getScore(player) ?? 0;
+    const section = sectionObj.getScore(player) ?? 0;
+
+    switch (eventType) {
+        // case "levitation": case "slow_falling": 
+        //     player.runCommand(`function levels/${chapter}${section}/events/${eventType}`);
+        //     break;
+        case "timeline": case "reset":
+            player.runCommand(`function levels/${chapter}${section}/${eventType}`);
+            break;
+        case "title":
+            player.sendMessage([`[${chapter}-${section}]`, { translate: "tell.reset" }]);
+            player.onScreenDisplay.setTitle(
+                { translate: `title.${chapter}${section}` },
+                {
+                    fadeInDuration: 10,
+                    stayDuration: 70,
+                    fadeOutDuration: 20,
+                    subtitle: `${chapter}-${section}`
+                }
+            )
+            break;
+    }
+
+}, { namespaces: ["lc"] })
 
 // 检查是否使用了物品，如有则执行命令
-world.afterEvents.itemUse.subscribe( event => {
-    if ( usableItems.includes( event.itemStack.typeId ) ) {
-        event.source.runCommand( `function lib/level/items/${event.itemStack.typeId.split(":")[1]}` );
-    }
-} )
+world.afterEvents.itemUse.subscribe(event => {
+    const itemStack = event.itemStack;
+    if (!usableItems.includes(itemStack.typeId)) return; // 如果不是特定物品则终止代码
+    const itemId = itemStack.typeId.split(":")[1];
+
+    const player = event.source;
+    player.runCommand(`function lib/level/items/${itemId}`);
+})
 
 // 空中跳跃辅助使用道具
 
-system.runInterval( () => {
+system.runInterval(() => {
+
+    // 读取计分项
+    const IsJumpingObj = getScoreboard("isJumping", "是否跳跃");
+    const IsInSkyObj = getScoreboard("isInSky", "是否在空中");
+    const dataObj = getScoreboard("data", "数据");
+
     world.getPlayers().forEach(player => {
         /* 
         lastIsJumping
         lastIsInSky
         jumpToUseItem 是否开启本函数“空中跳跃辅助使用道具”
         */
-        let lastIsJumping=IsJumping.getScore(player),lastIsInSky=IsInSky.getScore(player),jumpToUseItem=data.getScore('jumpToUseItem');
-        if (jumpToUseItem && !lastIsJumping && player.isJumping && lastIsInSky){
-            for (let i=0;i<usableEffectItems.length;++i){
-                if (player.runCommand(`execute if entity @s[hasitem={item=${usableEffectItems[i]},location=slot.weapon.mainhand}]`).successCount)
-                    player.runCommand( `function lib/level/items/${usableEffectItems[i].split(":")[1]}` );
-            }
-        }
-        IsJumping.setScore(player,player.isJumping);
-        IsInSky.setScore(player,(!player.isOnGround && !player.isInWater));
+        const lastIsJumping = IsJumpingObj.getScore(player);
+        const lastIsInSky = IsInSkyObj.getScore(player);
+        const jumpToUseItem = dataObj.getScore('jumpToUseItem');
+
+        if (jumpToUseItem && !lastIsJumping && player.isJumping && lastIsInSky) {
+            usableEffectItems.forEach(itemId => {
+                const isHeldingItem = player.runCommand(`execute if entity @s[hasitem={item=${itemId},location=slot.weapon.mainhand}]`).successCount;
+                if (isHeldingItem) player.runCommand(`function lib/level/items/${itemId.split(":")[1]}`);
+            });
+        };
+        IsJumpingObj.setScore(player, player.isJumping ? 1 : 0);
+        IsInSkyObj.setScore(player, (!player.isOnGround && !player.isInWater) ? 1 : 0);
     });
 });

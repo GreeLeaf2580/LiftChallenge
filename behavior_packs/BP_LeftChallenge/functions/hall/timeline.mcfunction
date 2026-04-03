@@ -1,3 +1,4 @@
+#如果玩家在选项房间内，启用选项房间的时间线，以设置游戏
 execute positioned 48 10 43 if entity @a[r=5] run function hall/option/timeline
 
 

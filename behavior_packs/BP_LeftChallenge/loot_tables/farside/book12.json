@@ -10,10 +10,14 @@
             {
               "function": "set_book_contents",
               "author": "GreeLeaf",
-              "title": "§r§fPreview",
+              "title": "",
               "pages": [
                 "{\"rawtext\": [{ \"translate\": \"tell.levitation\"},{\"text\":\"\nV 0:01\"} ] }"
               ]
+            },
+            {
+              "function": "set_name",
+              "name": "§r§f预览Preview"
             }
           ]
         }

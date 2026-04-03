@@ -31,4 +31,3 @@ scoreboard players set @s restTime 20
 function lib/level/enum/tp
 
 function lib/level/enum/reset
-

@@ -4,6 +4,9 @@
 #清除被该关卡选中的玩家背包
 clear @s
 
+#添加远处雾的堆栈
+fog @s push "lc:farside_fog" "lc:farside_fog"
+
 #给予被选中玩家物品
     #给予“提示”
     execute if score @s chapter matches 4 run replaceitem entity @s slot.hotbar 6 lc:hint 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}

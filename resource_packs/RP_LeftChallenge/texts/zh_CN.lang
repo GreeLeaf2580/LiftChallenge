@@ -16,7 +16,7 @@ item.use=使用
 entity.lc:text_display.name=文本展示
 
 ## ===== 方块 =====
-
+lc:number_block=数字方块
 tile.lc:number_block_0.name=数字方块 0
 tile.lc:number_block_1.name=数字方块 1
 tile.lc:number_block_2.name=数字方块 2

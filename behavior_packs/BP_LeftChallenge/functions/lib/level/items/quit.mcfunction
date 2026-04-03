@@ -20,15 +20,8 @@ titleraw @s actionbar { "rawtext": [{ "text": "" }] }
 
 execute if score @s chapter matches 0.. run tp @s 33 10 54 0 0
 
-
-
-execute if score @s chapter matches 0 if score @s section matches 1 run function levels/01/quit
-execute if score @s chapter matches 1 if score @s section matches 1 run function levels/11/quit
-execute if score @s chapter matches 1 if score @s section matches 2 run function levels/12/quit
-execute if score @s chapter matches 1 if score @s section matches 3 run function levels/13/quit
-execute if score @s chapter matches 1 if score @s section matches 4 run function levels/14/quit
-execute if score @s chapter matches 1 if score @s section matches 5 run function levels/15/quit
-
+#移除远处雾堆栈
+fog @s pop "lc:farside_fog"
 
 scoreboard players set @s chapter 0
 
