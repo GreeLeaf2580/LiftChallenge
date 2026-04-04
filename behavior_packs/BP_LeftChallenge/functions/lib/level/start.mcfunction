@@ -20,3 +20,6 @@ fog @s push "lc:farside_fog" "lc:farside_fog"
 function lib/level/enum/reset
 
 function lib/level/enum/spawnpoint
+
+# 播放音效
+scriptevent "lc:playSound" random.enderchestopen 5

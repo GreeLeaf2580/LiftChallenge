@@ -2,7 +2,7 @@
 #使用物品->lib/level/items/quit->levels/xx/quit
 
 #播放关闭末影箱的音效
-function lib/modify_states/sound/quit
+scriptevent "lc:playSound" random.enderchestclosed 5
 
 #清除被该关卡选中的玩家背包
 clear @s

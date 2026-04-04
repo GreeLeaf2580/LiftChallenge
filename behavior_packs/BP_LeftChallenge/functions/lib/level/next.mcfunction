@@ -2,7 +2,7 @@
 #levels/next->lib/level/next
 
 #播放通关的音效
-function lib/modify_states/sound/finish
+scriptevent "lc:playSound" beacon.activate 5
 
 #清除药水效果
 effect @s clear

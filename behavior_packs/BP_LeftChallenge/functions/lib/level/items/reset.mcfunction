@@ -1,7 +1,7 @@
 #重置关卡的中间件枚举函数
 #使用物品->***lib/level/items/reset***->lib/level/enum/reset->levels/xx/reset
 #播放末影人音效
-function lib/modify_states/sound/reset
+scriptevent "lc:playSound" mob.endermen.portal 3
 
 #清除药水效果
 effect @s clear

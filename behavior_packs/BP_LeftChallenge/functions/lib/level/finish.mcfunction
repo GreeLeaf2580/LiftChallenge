@@ -1,8 +1,11 @@
 #通关关卡的中间件函数
 #levels/finish->lib/level/finish
+# 调用此方法时：需指定执行位置为关卡入口上方 1 格（execute positioned ...），且末地烛需后于此函数放置
 
 #播放通关的音效
-function lib/modify_states/sound/cheer
+execute if block ~~~ air as @a at @s run scriptevent "lc:playSound" random.toast_challenge_complete 5
+execute if block ~~~ air as @a at @s run summon fireworks_rocket ~~~
+execute unless block ~~~ air run scriptevent "lc:playSound" beacon.activate 5
 
 #清除被该关卡选中的玩家背包
 clear @s

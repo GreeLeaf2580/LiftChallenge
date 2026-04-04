@@ -6,11 +6,6 @@ function system/timer
 # --- 时间线 ---
 execute if score timeline active matches 1.. run function system/controller/timeline
 
-# --- 音效控制器 ---
-# 仅当启用后执行
-
-execute if score sound active matches 1.. run function system/controller/sound
-
 # --- 反退出重进 ---
 ## 获取退出重进的玩家
 scoreboard players add @a isOnline 0
@@ -31,5 +26,4 @@ scoreboard players set @a[scores={deathState=1}] deathState 2
 # execute as @a[scores={deathState=!0}] at @s run function lib/level/items/reset
 
 # --- 开发者模式下的更改游戏模式 ---
-execute if score developerMode settings matches 1 run function lib/modify_data/developer_gamemode
-
+execute if score developerMode settings matches 1 run function lib/utils/change_gamemode

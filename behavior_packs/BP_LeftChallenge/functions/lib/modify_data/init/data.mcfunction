@@ -54,7 +54,3 @@ scoreboard players set keepValue data 0
 
 ## 开发者设置
 scoreboard players set developerMode settings 0
-
-## 音效控制器
-scoreboard players set sound active 0
-scoreboard players set sound time 0
