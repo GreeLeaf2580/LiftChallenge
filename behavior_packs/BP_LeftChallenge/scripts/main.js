@@ -1,6 +1,6 @@
 // @ts-check
 
-import { world, system, Player } from "@minecraft/server";
+import { world, system, Player, GameMode } from "@minecraft/server";
 
 /** 可执行命令的物品 */
 const usableItems = ["lc:quit", "lc:reset", "lc:hint", "lc:levitation", "lc:slow_falling"];
@@ -72,7 +72,6 @@ world.afterEvents.itemUse.subscribe(event => {
 })
 
 // 空中跳跃辅助使用道具
-
 system.runInterval(() => {
 
     // 读取计分项
@@ -99,4 +98,15 @@ system.runInterval(() => {
         IsJumpingObj.setScore(player, player.isJumping ? 1 : 0);
         IsInSkyObj.setScore(player, (!player.isOnGround && !player.isInWater) ? 1 : 0);
     });
+});
+
+//如果玩家为冒险模式，则禁止交互花盆
+world.beforeEvents.playerInteractWithBlock.subscribe(event => {
+    const player = event.player;
+    if (player.getGameMode() !== GameMode.Adventure) return;
+
+    const flowerPot = event.block;
+    if (flowerPot.typeId !== "minecraft:flower_pot") return;
+
+    event.cancel = true;
 });
