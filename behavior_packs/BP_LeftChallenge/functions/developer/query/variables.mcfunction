@@ -37,5 +37,5 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 
 ## 标签型变量
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§l===== 标签型变量 =====" } ] }
-execute if score developerMode settings matches 1 run tellraw @s[tag=isAlive] { "rawtext": [ { "translate": "isAlive = §atrue §7| 玩家是否存活" } ] }
-execute if score developerMode settings matches 1 run tellraw @s[tag=!isAlive] { "rawtext": [ { "translate": "isAlive = §efalse §7| 玩家是否存活" } ] }
+# execute if score developerMode settings matches 1 run tellraw @s[tag=isAlive] { "rawtext": [ { "translate": "isAlive = §atrue §7| 玩家是否存活" } ] }
+# execute if score developerMode settings matches 1 run tellraw @s[tag=!isAlive] { "rawtext": [ { "translate": "isAlive = §efalse §7| 玩家是否存活" } ] }

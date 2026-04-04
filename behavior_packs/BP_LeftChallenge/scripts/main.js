@@ -14,10 +14,14 @@ function getScoreboard(objectiveId, displayName) {
     return world.scoreboard.getObjective(objectiveId) ?? world.scoreboard.addObjective(objectiveId, displayName);
 };
 
+// 枚举函数转为scriptevent以实现枚举
 system.afterEvents.scriptEventReceive.subscribe(event => {
     /** @type {Player} */ // @ts-ignore
     const player = event.sourceEntity;
-    if (!player) return;
+    if (!player) {
+        world.sendMessage("No Player Here!");
+        return;
+    }
     if (player.typeId !== "minecraft:player") return;
     const eventType = event.id.split(":")[1];
 
@@ -25,12 +29,17 @@ system.afterEvents.scriptEventReceive.subscribe(event => {
     const sectionObj = getScoreboard("section", "关卡节");
     const chapter = chapterObj.getScore(player) ?? 0;
     const section = sectionObj.getScore(player) ?? 0;
-
     switch (eventType) {
-        // case "levitation": case "slow_falling": 
-        //     player.runCommand(`function levels/${chapter}${section}/events/${eventType}`);
-        //     break;
-        case "timeline": case "reset":
+        case "levitation": case "slow_falling":
+            player.runCommand(`function lib/modify_states/sound/${eventType}`);
+            player.runCommand(`clear @s lc:${eventType} -1 1`);
+            player.runCommand(`function levels/${chapter}${section}/events/${eventType}`);
+            getScoreboard(eventType, "").addScore(player, -1);
+            break;
+        case "timeline": 
+            player.runCommand(`function levels/${chapter}${section}/${eventType}`);
+            break;
+        case "reset":
             player.runCommand(`function levels/${chapter}${section}/${eventType}`);
             break;
         case "title":
@@ -54,8 +63,11 @@ world.afterEvents.itemUse.subscribe(event => {
     const itemStack = event.itemStack;
     if (!usableItems.includes(itemStack.typeId)) return; // 如果不是特定物品则终止代码
     const itemId = itemStack.typeId.split(":")[1];
-
     const player = event.source;
+    if (usableEffectItems.includes(itemStack.typeId)) {
+        player.runCommand(`scriptevent lc:${itemId} ""`);
+        return;
+    }
     player.runCommand(`function lib/level/items/${itemId}`);
 })
 

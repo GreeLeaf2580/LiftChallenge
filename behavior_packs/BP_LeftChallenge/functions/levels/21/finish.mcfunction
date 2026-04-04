@@ -1,11 +1,12 @@
+#完成2-1
+#提示玩家完成关卡
 tellraw @a { "rawtext": [{ "text": "[2-1]" },{ "translate": "tell.finish" }] }
 
+#修改大厅的选关界面
 structure load finish_ray 26 11 61
 setblock 23 10 61 beacon [] destroy
 
 function lib/level/next
 
-tellraw @s { "rawtext": [{ "text": "[2-2]" },{ "translate": "tell.reset" }] }
-
-titleraw @s title { "rawtext": [{ "translate": "title.22" }] }
-title @s subtitle 2-2
+#显示下一关的标题
+function lib/level/enum/title

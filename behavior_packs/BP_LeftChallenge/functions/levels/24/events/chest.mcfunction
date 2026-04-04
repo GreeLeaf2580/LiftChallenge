@@ -1,3 +1,4 @@
+#玩家开启对应位置的陷阱箱，获得对应效果并提示
 execute positioned 249 14 -80 unless block ~~-1~ redstone_wire ["redstone_signal"=0] as @p run effect @s instant_health 1 9 true
 execute positioned 249 14 -80 unless block ~~-1~ redstone_wire ["redstone_signal"=0] as @p run tp @s 266 10 -106
 

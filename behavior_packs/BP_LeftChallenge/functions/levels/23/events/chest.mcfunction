@@ -1,3 +1,4 @@
+#玩家使用开启对应位置的陷阱箱，获得对应效果并提示
 execute positioned 248 9 -52 unless block ~~~ redstone_wire ["redstone_signal"=0] as @p run tp @s 236 9 -72
 
 

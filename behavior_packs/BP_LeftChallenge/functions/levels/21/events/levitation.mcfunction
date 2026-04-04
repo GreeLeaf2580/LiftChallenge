@@ -1,3 +1,4 @@
+#玩家使用相应物品的相应次数，获得对应效果并提示
 execute if score @s levitation matches 3 run effect @s levitation 20 0 true
 execute if score @s levitation matches 3 run tellraw @s { "rawtext": [{ "translate": "tell.effect" },{ "translate": "tell.levitation", "with": ["","0:20"] } ] }
 

@@ -1,3 +1,4 @@
+#spawnpoint功能的枚举函数：spawnpoint @s [每个关卡的起始位置]
 execute if score @s chapter matches 0 if score @s section matches 0 run spawnpoint @s 18 10 43
 execute if score @s chapter matches 0 if score @s section matches 1 run spawnpoint @s 150 41 150
 
