@@ -15,4 +15,6 @@ playsound random.anvil_break @a
 tellraw @a {"rawtext": [{"translate":"tell.restart.init_levels"}]}
 setblock 48 12 48 acacia_button ["button_pressed_bit"=false,"facing_direction"=2]
 
-function lib/modify_states/timeline/disable
+# 禁用时间线
+function lib/modify_data/states/timeline/dont_keep_value
+function lib/modify_data/states/timeline/disable
