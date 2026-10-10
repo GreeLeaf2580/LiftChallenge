@@ -27,3 +27,6 @@ scoreboard players set @a[scores={deathState=1}] deathState 2
 
 # --- 开发者模式下的更改游戏模式 ---
 execute if score developerMode settings matches 1 run function lib/utils/change_gamemode
+
+execute if entity @a[scores={chapter=3}] run effect @a saturation 999 0 true
+execute if entity @a[scores={chapter=!3}] run effect @a saturation 0 0 true

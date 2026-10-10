@@ -121,9 +121,9 @@ world.beforeEvents.playerInteractWithBlock.subscribe(event => {
     const player = event.player;
     if (player.getGameMode() !== GameMode.Adventure) return;
 
-    // 如果不为花盆，则终止代码
-    const flowerPot = event.block;
-    if (flowerPot.typeId !== "minecraft:flower_pot") return;
+    // 如果不为黑名单方块，则终止代码
+    const bannedBlocks=["minecraft:flower_pot","minecraft:beacon"]
+    if (!bannedBlocks.includes(event.block.typeId)) return;
 
     // 其余情况，阻止玩家对花盆的交互
     event.cancel = true;

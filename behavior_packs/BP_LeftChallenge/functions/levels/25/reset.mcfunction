@@ -9,9 +9,7 @@ scoreboard players set failTime active 100
 
 #给予玩家物品并修改对应的计分项
 loot replace entity @s slot.hotbar 6 loot "farside/book25"
-give @s lc:levitation 4
-scoreboard players set @s levitation 4
+give @s lc:levitation 3
+scoreboard players set @s levitation 3
 
-give @s lc:slow_falling 1
-scoreboard players set @s slow_falling 1
 

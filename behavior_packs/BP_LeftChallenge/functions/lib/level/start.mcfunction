@@ -5,7 +5,17 @@
 clear @s
 
 #添加远处雾的堆栈
-fog @s push "lc:farside_fog" "lc:farside_fog"
+execute unless score @s chapter matches 3 run fog @s push "lc:farside_fog" "lc:farside_fog"
+execute if score @s chapter matches 3 run fog @s push "lc:farside_rain_fog" "lc:farside_rain_fog"
+
+#如果第三章有玩家，则将设置暴风雨夜，没有则为白天
+execute if entity @a[scores={chapter=3}] run time set midnight
+execute if entity @a[scores={chapter=3}] run weather thunder
+execute if entity @a[scores={chapter=3}] run difficulty hard
+
+execute if entity @a[scores={chapter=!3}] run time set noon
+execute if entity @a[scores={chapter=!3}] run weather clear
+execute if entity @a[scores={chapter=!3}] run difficulty peaceful
 
 #给予被选中玩家物品
     #给予“提示”

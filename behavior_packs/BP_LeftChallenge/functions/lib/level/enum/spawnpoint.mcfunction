@@ -14,3 +14,17 @@ execute if score @s chapter matches 2 if score @s section matches 2 run spawnpoi
 execute if score @s chapter matches 2 if score @s section matches 3 run spawnpoint @s 248 10 -48
 execute if score @s chapter matches 2 if score @s section matches 4 run spawnpoint @s 220 10 -96
 execute if score @s chapter matches 2 if score @s section matches 5 run spawnpoint @s 305 10 -78
+
+
+execute if score @s chapter matches 3 if score @s section matches 1 run spawnpoint @s 501 11 300
+execute if score @s chapter matches 3 if score @s section matches 2 run spawnpoint @s 564 11 286
+execute if score @s chapter matches 3 if score @s section matches 3 run spawnpoint @s 573 11 355
+execute if score @s chapter matches 3 if score @s section matches 4 run spawnpoint @s 569 11 461
+execute if score @s chapter matches 3 if score @s section matches 5 run spawnpoint @s 410 41 460
+
+
+execute if score @s chapter matches 4 if score @s section matches 1 run spawnpoint @s 300 11 300
+execute if score @s chapter matches 4 if score @s section matches 2 run spawnpoint @s 198 11 309
+execute if score @s chapter matches 4 if score @s section matches 3 run spawnpoint @s 133 11 316
+execute if score @s chapter matches 4 if score @s section matches 4 run spawnpoint @s 75 11 313 
+execute if score @s chapter matches 4 if score @s section matches 5 run spawnpoint @s 106 11 245

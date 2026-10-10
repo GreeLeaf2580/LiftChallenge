@@ -2,6 +2,9 @@
 ##使用物品->lib/level/items/reset->***lib/level/enum/reset***->levels/xx/reset
 #根据chapter和section决定重置哪一个关卡
 execute as @s at @s run scriptevent "lc:reset" ""
+
+# 已封装整合至scripts/main.js实现
+# 封装样例：
 # execute if score @s chapter matches 0 if score @s section matches 1 run function levels/01/reset
 
 # execute if score @s chapter matches 1 if score @s section matches 1 run function levels/11/reset

@@ -12,8 +12,8 @@
               "author": "GreeLeaf",
               "title": "",
               "pages": [
-                "{\"rawtext\": [{ \"translate\": \"tell.levitation\"},{\"text\":\"\nIII 0:01\nXV 0:03\nV 0:01\nIII 0:01\"}] }",
-                "{\"rawtext\":[{ \"translate\": \"tell.slow_falling\", \"with\": [\"\",\"0:03\"] }]}"
+                "{\"rawtext\": [{ \"translate\": \"tell.levitation\"},{\"text\":\"\nIII 0:01\nXV 0:03\nV 0:01 \n296 9 -55 III 0:01\"}] }",
+                "{\"rawtext\":[{ \"translate\": \"tell.slow_falling\"},{\"text\":\"\n305 11 -38 I 0:03\"}]}"
               ]
             },
             {

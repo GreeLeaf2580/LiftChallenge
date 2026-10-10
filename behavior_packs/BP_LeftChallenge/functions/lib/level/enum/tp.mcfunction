@@ -15,3 +15,17 @@ execute if score @s chapter matches 2 if score @s section matches 2 run tp @s 24
 execute if score @s chapter matches 2 if score @s section matches 3 run tp @s 248 10 -48  180 0
 execute if score @s chapter matches 2 if score @s section matches 4 run tp @s 220 10 -96  -90 0
 execute if score @s chapter matches 2 if score @s section matches 5 run tp @s 305 10 -78   0 0
+
+
+execute if score @s chapter matches 3 if score @s section matches 1 run tp @s 501 11 300   -90 0
+execute if score @s chapter matches 3 if score @s section matches 2 run tp @s 564 11 286   -90 0
+execute if score @s chapter matches 3 if score @s section matches 3 run tp @s 573 11 355   0 0
+execute if score @s chapter matches 3 if score @s section matches 4 run tp @s 569 11 461   90 0
+execute if score @s chapter matches 3 if score @s section matches 5 run tp @s 410 41 460   180 0
+
+
+execute if score @s chapter matches 4 if score @s section matches 1 run tp @s 300 11 300   90 0
+execute if score @s chapter matches 4 if score @s section matches 2 run tp @s 198 11 309   90 0
+execute if score @s chapter matches 4 if score @s section matches 3 run tp @s 133 11 316   90 0
+execute if score @s chapter matches 4 if score @s section matches 4 run tp @s 75 11 313   90 0
+execute if score @s chapter matches 4 if score @s section matches 5 run tp @s 106 11 245   -90 0

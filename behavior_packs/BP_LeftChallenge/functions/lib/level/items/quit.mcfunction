@@ -22,7 +22,19 @@ execute if score @s chapter matches 0.. run tp @s 33 10 54 0 0
 
 #移除远处雾堆栈
 fog @s pop "lc:farside_fog"
+fog @s pop "lc:farside_rain_fog"
 
 scoreboard players set @s chapter 0
 
 scoreboard players set @s section 0
+
+#如果第三章有玩家，则将设置暴风雨夜，没有则为白天
+execute if entity @a[scores={chapter=3}] run time set midnight
+execute if entity @a[scores={chapter=3}] run weather thunder
+execute if entity @a[scores={chapter=3}] run difficulty easy
+execute if entity @a[scores={chapter=3}] run effect @a saturation 999 0 true
+
+execute if entity @a[scores={chapter=!3}] run time set noon
+execute if entity @a[scores={chapter=!3}] run weather clear
+execute if entity @a[scores={chapter=!3}] run difficulty peaceful
+execute if entity @a[scores={chapter=!3}] run effect @a saturation 0 0 true

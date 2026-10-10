@@ -11,7 +11,8 @@
       "tag:stone": {},
       "minecraft:destructible_by_mining": {
         "seconds_to_destroy": 3
-      }
+      },
+      "minecraft:light_emission": 14
     }
   }
 }

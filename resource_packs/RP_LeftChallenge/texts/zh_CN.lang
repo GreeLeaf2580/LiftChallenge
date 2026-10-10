@@ -31,16 +31,23 @@ tile.lc:number_block_9.name=数字方块 9
 ## ===== 标题 =====
 title.exposeTime=剩余时间 %s秒
 title.01=远处教程
+title.0_1=高处教程
+
 title.11=树荫
 title.12=弹跳
 title.13=缓降
 title.14=歧路
 title.15=树林之主
+
 title.21=解除
 title.22=覆盖
 title.23=盲盒商场
 title.24=附加
-title.25=多余
+title.25=被动
+
+title.31=流浪
+
+
 
 
 ## ===== 对话 =====
