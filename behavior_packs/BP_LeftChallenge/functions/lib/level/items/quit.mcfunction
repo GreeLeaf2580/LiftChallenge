@@ -18,7 +18,16 @@ xp -1000L @s
 
 titleraw @s actionbar { "rawtext": [{ "text": "" }] }
 
-execute if score @s chapter matches 0.. run tp @s 33 10 54 0 0
+#如果章节=0，关卡=1，说明刚刚在游玩远处模式教程，退出到远处模式大厅
+execute if score @s chapter matches 0 if score @s section matches 1 run tp @s 33 10 54 0 0
+#如果章节=-1，关卡=1，说明刚刚在游玩高处模式教程，退出到高处模式大厅
+execute if score @s chapter matches 0 if score @s section matches -1 run tp @s 33 10 32 180 0
+#如果章节=0，关卡=0，说明刚刚在大厅，退出到大厅，但获取quit手段非正常
+execute if score @s chapter matches 0 if score @s section matches 0 run tp @s 33 10 43   90 0
+#如果章节>=1，说明刚刚在游玩远处模式，退出到远处模式大厅
+execute if score @s chapter matches 1.. run tp @s 33 10 54 0 0
+#如果章节<=-1，说明刚刚在游玩高处模式，退出到高处模式大厅
+execute if score @s chapter matches ..-1 run tp @s 33 10 32 180 0
 
 #移除远处雾堆栈
 fog @s pop "lc:farside_fog"
@@ -31,7 +40,7 @@ scoreboard players set @s section 0
 #如果第三章有玩家，则将设置暴风雨夜，没有则为白天
 execute if entity @a[scores={chapter=3}] run time set midnight
 execute if entity @a[scores={chapter=3}] run weather thunder
-execute if entity @a[scores={chapter=3}] run difficulty easy
+execute if entity @a[scores={chapter=3}] run difficulty hard
 execute if entity @a[scores={chapter=3}] run effect @a saturation 999 0 true
 
 execute if entity @a[scores={chapter=!3}] run time set noon

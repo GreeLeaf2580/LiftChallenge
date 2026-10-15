@@ -24,12 +24,8 @@ execute if block ~~2~ quartz_slab [] run scoreboard players operation @s restTim
 execute unless score @s restTime = @s lastRestTime run function lib/level/actionbar_expose
 execute run scoreboard players operation @s lastRestTime = @s restTime
 
-#如果玩家在关卡里，且倒计时归零
-    #如果玩家脚下是空气，则提示玩家飘走了
-    execute if block ~~-1~ air [] if score @s restTime matches 0 run tellraw @s { "rawtext": [{ "translate": "tell.failmsg.lift_out", "with": { "rawtext": [{ "selector": "@s" }] } }] }
-
-    #如果玩家脚下不是空气，则提示晒伤
-    execute unless block ~~-1~ air [] if score @s restTime matches 0 run tellraw @s { "rawtext": [{ "translate": "tell.failmsg.sun_burnt", "with": { "rawtext": [{ "selector": "@s" }] } }] }
+#如果玩家在关卡里，且倒计时归零，则提示计时结束
+    execute if score @s restTime matches 0 run tellraw @s { "rawtext": [{ "translate": "tell.failmsg.lifeEnd", "with": { "rawtext": [{ "selector": "@s" }] } }] }
 
     #则重置关卡
     execute if score @s restTime matches 0 run function lib/level/items/reset

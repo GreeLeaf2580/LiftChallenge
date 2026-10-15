@@ -43,10 +43,17 @@ title.21=解除
 title.22=覆盖
 title.23=盲盒商场
 title.24=附加
-title.25=被动
+title.25=多余
 
 title.31=流浪
+title.32=旋风
+title.33=引雷
+title.34=潜影
+title.35=激流
 
+title.41=粘性
+title.42=索引
+title.43=无我
 
 
 
@@ -58,7 +65,7 @@ tell.restart.recover=§4[!警告!]§f重置按钮已恢复
 tell.restart.init_levels=§4[!警告!]已重置该进度
 
 tell.failmsg.out_world=%s 掉出了世界
-tell.failmsg.sun_burnt=%s 晒伤了
+tell.failmsg.lifeEnd=%s 的生命走到终点
 tell.failmsg.lift_out=%s 飘走了
 tell.failmsg.headache=%s 磕到了
 tell.finish= 已完成！

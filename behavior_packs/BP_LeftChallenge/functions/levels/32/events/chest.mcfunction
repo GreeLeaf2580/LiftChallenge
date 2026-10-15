@@ -1,0 +1,1 @@
+execute positioned 574 3 341 if block ~~~ minecraft:lit_redstone_lamp [] as @p run tp @s 591 16 307
