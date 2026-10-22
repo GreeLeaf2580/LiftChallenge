@@ -2,7 +2,8 @@
 
 #重置关卡装有终点指南针的潜影盒
 #指南针结构 structure save compass24 221 9 -96   221 9 -96 disk
-structure load compass24 221 9 -96
+# structure load compass24 221 9 -96
+scriptevent "lc:waypoint" 305 10 -78
 
 #重置玩家的倒计时
 scoreboard players set failTime active 100

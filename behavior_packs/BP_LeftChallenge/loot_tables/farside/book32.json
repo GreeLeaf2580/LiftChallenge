@@ -12,7 +12,6 @@
               "author": "GreeLeaf",
               "title": "",
               "pages": [
-                "{\"rawtext\": [{ \"translate\": \"tell.levitation\"},{\"text\":\"\nIII 0:01\"}] }",
                 "{\"rawtext\": [{\"translate\": \"tell.slow_falling\"},{\"text\":\"\nI 0:02\n577 13 310 I 0:05\"}]}",
                 "{\"rawtext\": [{ \"translate\": \"entity.breeze.name\"},{\"text\":\"\n572 10 295 \n568 16 332\n586 18 316\"}]}"
               ]

@@ -1,30 +1,32 @@
 {
-    "format_version": 2,
-    "header": {
-        "name": "升空挑战LiftChallenge行为包",
-        "description": "升空挑战LiftChallenge地图配套行为包。技术支持@一只卑微的量筒、@lanos212",
-        "uuid": "eec60bcb-0f5b-4cc4-afce-f51d7c989371",
-        "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 20, 50 ]
+  "format_version": 2,
+  "header": {
+    "name": "升空挑战LiftChallenge行为包",
+    "description": "升空挑战LiftChallenge地图配套行为包。技术支持@一只卑微的量筒、@lanos212",
+    "uuid": "eec60bcb-0f5b-4cc4-afce-f51d7c989371",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 26, 40]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "version": [1, 0, 0],
+      "uuid": "8cc80ec6-4328-4fea-b3f8-c85084ec145c"
     },
-    "modules": [
-        {
-            "type": "data",
-            "version": [ 1, 0, 0 ],
-            "uuid": "8cc80ec6-4328-4fea-b3f8-c85084ec145c"
-        },
-        {
-            "type": "script",
-            "version": [ 1, 0, 0 ],
-            "uuid": "8f0ab0fd-d686-4334-be62-031f9ed597e4",
-            "entry": "scripts/main.js",
-            "language": "javascript"
-        }
-    ],
-    "dependencies": [
-        {
-            "module_name": "@minecraft/server",
-            "version": "2.0.0"
-        }
-    ]
+    {
+      "type": "script",
+      "version": [1, 0, 0],
+      "uuid": "8f0ab0fd-d686-4334-be62-031f9ed597e4",
+      "entry": "scripts/main.js",
+      "language": "javascript"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.8.0"
+    },
+    { "module_name": "@minecraft/server-ui",
+      "version": "2.0.0" }
+  ]
 }

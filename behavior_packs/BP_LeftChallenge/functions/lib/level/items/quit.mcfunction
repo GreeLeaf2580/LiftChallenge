@@ -3,6 +3,7 @@
 
 #播放关闭末影箱的音效
 scriptevent "lc:playSound" random.enderchestclosed 5
+scriptevent "lc:waypoint" remove
 
 #清除被该关卡选中的玩家背包
 clear @s

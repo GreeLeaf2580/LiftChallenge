@@ -2,8 +2,8 @@
 #当玩家失败判定
 execute at @s run function lib/level/is_fail/timeline
 
-#当玩家开启陷阱箱
-execute at @s run function levels/23/events/chest
+#当玩家站在对应位置的方块上，获得对应效果
+execute at @s run function levels/23/events/stand
 
 #当玩家到达终点
 # 220 9 -96

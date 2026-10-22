@@ -5,7 +5,7 @@
         "description": "升空挑战LiftChallenge地图配套资源包。贴图绘制@野鲤，技术支持@一只卑微的量筒、@lanos212",
         "uuid": "65e92a65-a41d-4005-9328-06363e041bfe",
         "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 20, 10 ]
+        "min_engine_version": [ 1, 26, 30 ]
     },
     "modules": [
         {

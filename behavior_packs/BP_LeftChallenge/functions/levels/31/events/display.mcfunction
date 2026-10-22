@@ -1,0 +1,1 @@
+summon lc:text_display "III 0:02" 555 7 287

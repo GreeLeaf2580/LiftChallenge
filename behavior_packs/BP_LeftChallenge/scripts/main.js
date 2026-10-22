@@ -1,6 +1,7 @@
 // @ts-check
 
 import { world, system, Player, GameMode } from "@minecraft/server";
+import * as lib from "./lib.js";
 
 /** 可执行命令的物品 */
 const usableItems = ["lc:quit", "lc:reset", "lc:hint", "lc:levitation", "lc:slow_falling"];
@@ -62,6 +63,38 @@ system.afterEvents.scriptEventReceive.subscribe(event => {
             system.runTimeout(() => player.playSound(soundId, { pitch: pitch }), tickDelay);
             break;
 
+        // 进入对应关卡后5刻再生成实体
+        // 语法：scriptevent "lc:later" [summon||display]
+        case "later":
+            let command = event.message.split(" ")[0];
+            // 生成普通实体
+            if (command === 'summon') system.runTimeout(() => player.runCommand(`function levels/${chapter}${section}/events/summon`), 5);
+            // 生成展示实体
+            if (command === 'display') system.runTimeout(() => player.runCommand(`function levels/${chapter}${section}/events/display`), 5);
+            break;
+
+        // 定位栏
+        // 语法：scriptevent "lc:waypoint" remove 移除所有定位栏
+        // 语法：scriptevent "lc:waypoint" x y z 添加一个定位栏
+        case "waypoint":
+            const operation = event.message.split(" ")[0];
+            lib.LocatorBarUtils.removeAll(player);
+            if (operation === 'remove') return;
+            let point = event.message
+            const flagIconPath = "textures/locator_bar/bnw_flag";
+            lib.LocatorBarUtils.addLocation(
+                player,
+                lib.Vector3Utils.parseString(point),
+                {
+                    textureBoundsList: [
+                        { texture: { path: flagIconPath, iconHeight: 1, iconWidth: 1 }, lowerBound: 0, upperBound: 75 }
+                    ],
+                },
+                { red: 1, green: 1, blue: 1 },
+            );
+            // lib.LocatorBarUtils.addDefaultIconLocation(player, lib.Vector3Utils.parseString(point), 0, 25, 50, 75, { red: 1, green: 1, blue: 1 },);
+            break;
+
     };
 
 }, { namespaces: ["lc"] })
@@ -114,7 +147,7 @@ system.runInterval(() => {
     });
 });
 
-// 如果玩家为冒险模式，则禁止交互花盆
+// 如果玩家为冒险模式，则禁止交互黑名单方块
 world.beforeEvents.playerInteractWithBlock.subscribe(event => {
 
     // 如果不为冒险模式玩家，则终止代码
@@ -122,10 +155,32 @@ world.beforeEvents.playerInteractWithBlock.subscribe(event => {
     if (player.getGameMode() !== GameMode.Adventure) return;
 
     // 如果不为黑名单方块，则终止代码
-    const bannedBlocks=["minecraft:flower_pot","minecraft:beacon"]
+    const bannedBlocks = ["minecraft:flower_pot", "minecraft:beacon"]
     if (!bannedBlocks.includes(event.block.typeId)) return;
 
-    // 其余情况，阻止玩家对花盆的交互
+    // 其余情况，阻止玩家对黑名单方块的交互
     event.cancel = true;
 
 });
+
+//让冒险模式的玩家无法攻击实体（deepseek老师实现）
+// @ts-ignore
+world.beforeEvents.entityHurt.subscribe((event) => {
+    const { damageSource, hurtEntity } = event;
+
+    // 获取攻击者：优先直接造成伤害的实体，其次检查弹射物的拥有者
+    let attacker = damageSource.damagingEntity;
+    if (!attacker && damageSource.damagingProjectile) {
+        // 弹射物（箭、雪球等）的拥有者
+        attacker = damageSource.damagingProjectile.getComponent("minecraft:projectile")?.owner;
+    }
+
+    // 攻击者不是玩家，或不存在，不处理
+    if (!attacker || attacker.typeId !== "minecraft:player") return;
+
+    // 攻击者是冒险模式，取消伤害
+    if (attacker.getGameMode() === GameMode.Adventure) {
+        event.cancel = true;
+    }
+});
+

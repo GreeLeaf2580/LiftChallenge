@@ -8,6 +8,7 @@ effect @s clear
 
 #给玩家回血
 effect @s instant_health 1 9 true
+effect @s saturation 1 9 true
 
 #清除经验等级
 xp -1000L @s
@@ -17,6 +18,7 @@ clear @s
 
 #初始给予 1 秒剩余时长，避免出现问题
 scoreboard players set @s restTime 20
+
 
 #给予被选中玩家物品
     #给予“提示”

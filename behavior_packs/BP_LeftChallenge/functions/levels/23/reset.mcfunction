@@ -2,7 +2,8 @@
 
 #重置关卡装有终点指南针的潜影盒
 #指南针结构 structure save compass23 248 9 -49   248 9 -49 disk
-structure load compass23 248 9 -49
+# structure load compass23 248 9 -49
+scriptevent "lc:waypoint" 220 10 -96
 
 #重置玩家的倒计时
 scoreboard players set failTime active 100
@@ -11,6 +12,4 @@ scoreboard players set failTime active 100
 loot replace entity @s slot.hotbar 6 loot "farside/book23"
 scoreboard players set failTime active 100
 
-
-
-
+execute positioned 243 5 -65 unless entity @e[type=lc:text_display,r=2] run scriptevent "lc:later" display
